@@ -3,12 +3,14 @@ import time
 aspect_choice = ""
 stakeholder_production = ""
 learn_more = ""
+# This is the set-up for the code, importing functions that are needed, and assigning values to variable that are needed later
 
 def typing_effect(text):
     for char in text:
         sys.stdout.write(char)
         sys.stdout.flush()
-        time.sleep(0.0125) 
+        time.sleep(0.0125)
+# This is the typewrter sort of effect function, that makes the outputted text typed out
 
 
 typing_effect("Welcome to the Systems Explorer! In this program, you will be able to explore and learn about the different stakeholders in a system.")
@@ -19,6 +21,7 @@ typing_effect("Analog watches, specifically, are watches that use a traditional 
 print("")
 typing_effect("Press ENTER to continue...")
 input("")
+# This is the introduction, where the purpose of the code is explained and it goes over what will be talked about
 
 
 typing_effect("There are a few categories that stakeholders fall under, those being production, consumption and disposal. Each category has its own unique stakeholders that play a role in the watch industry.")
@@ -28,9 +31,10 @@ while aspect_choice not in ["production", "consumption", "disposal"]:
     aspect_choice = input("").lower()
     if aspect_choice not in ["production", "consumption", "disposal"]:
         print("Invalid choice. Please choose either 'production', 'consumption', or 'disposal'.")
+# First input as to what apsect of the stakeholders the user wants to explore
 
 
-if aspect_choice == "production":
+if aspect_choice == "production": # If production is picked as the aspect to be explored, all of this information will unfold
     print("")
     typing_effect("The production of watches is essentially all that is required for the watch to be made. This includes the sourcing and assembly of the watch.")
     print("")
@@ -115,7 +119,7 @@ if aspect_choice == "production":
         typing_effect("It is important to be aware of these issues when purchasing a watch, and to try and support companies that source their materials ethically. A way to be sure of this is to look for certifications like Fair Trade.")
 
 
-if aspect_choice == "consumption":
+if aspect_choice == "consumption": # If consumption is picked as the aspect to be explored, all of this information will unfold
     print("")
     typing_effect("After the production of watches, they are then sold to consumers. Consumers are the entities who purchase and use the watches. This includes individuals, retailers, and even companies that buy watches in bulk for their employees.")
     print("")
@@ -175,7 +179,7 @@ if aspect_choice == "consumption":
         typing_effect("Retailers also play a crucial role in marketing and promoting watches to consumers, which can drive demand for certain types of watches.")
 
 
-if aspect_choice == "disposal":
+if aspect_choice == "disposal": # If disposal is picked as the aspect to be explored, all of this information will unfold
     print("")
     typing_effect("After the consumption of watches, they must then be disposed of. The stakeholders involved in disposal are responsible for what happens after the system is discarded.")
     print("")
@@ -243,6 +247,7 @@ if aspect_choice == "disposal":
         typing_effect("Donating watches helps to extend their lifespan and reduce waste, as it allows them to be used by someone else instead of being thrown away.")
         print("")
         typing_effect("There are many organizations that accept watch donations, including charities, thrift stores, and watch repair shops. It is important to ensure that the watches being donated are in good condition and still functional.")
+# In all of the previous code, quizzes were included to be more interactive and get user input, and depending on the stakeholder and aspect chosen, the code would continue differently
 
 print("")
 typing_effect("Now that you have explored the different stakeholders in the watch industry, you have a better understanding of the complex system that goes into creating, using, and disposing of watches.")
@@ -255,6 +260,7 @@ typing_effect("If you would like to find other sources to learn more about watch
 print("")
 typing_effect("If you would like to exit the program, type 'exit' when prompted below, or close the program")
 print("")
+# Allows users the choice of ending the program, learning about watches (not the stakeholders), or finding more sources so they can conduct their own research.
 while learn_more not in ["learn more", "other sources", "exit"]:    
     typing_effect("Would you like to learn more about the actual system of watches? (learn more/other sources/exit): ")
     learn_more = input("").lower()
